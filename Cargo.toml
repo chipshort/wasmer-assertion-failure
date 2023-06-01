@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "wasmer-code",
+    "test-wasm"
+]
