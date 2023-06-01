@@ -12,7 +12,7 @@ fn instantiate_and_call_wasm() {
     // compile wasm
     let (_engine, module) = compile(WASM);
     // store in cache
-    cache.insert("asdf", (Engine::headless(), module));
+    cache.insert("asdf", (Engine::headless(), module)); // also happens when inserting `_engine` instead of `Engine::headless()`
 
     // removing from the map seems to be fine, so maybe the cloning is the problem?
     // let (cached_engine, cached_module) = cache.remove("asdf").unwrap();
